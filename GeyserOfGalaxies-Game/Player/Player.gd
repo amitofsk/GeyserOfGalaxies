@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+# This is basic movement with rotation from Godot Docs -- 2D movement
+# Modified so that the player moves up and down and rotates to the left and right
+
 export (int) var speed = 200
 export (float) var rotation_speed = 1.5
 

@@ -7,8 +7,11 @@
 radius = 27.4591
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 219, 81 )
+position = Vector2( 210, 83 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.2, 0.2 )
