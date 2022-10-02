@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 27.4591
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="Area2D" groups=["player"]]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -24,3 +24,5 @@ shape = SubResource( 1 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 smoothing_enabled = true
+
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
