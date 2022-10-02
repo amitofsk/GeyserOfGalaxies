@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 35.1283
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=["enemy"]]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -20,8 +20,13 @@ texture = ExtResource( 1 )
 position = Vector2( -6, 6 )
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Movement_Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[node name="Change_Move_Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Movement_Timer" to="." method="_on_Movement_Timer_timeout"]
+[connection signal="timeout" from="Change_Move_Timer" to="." method="_on_Change_Move_Timer_timeout"]
